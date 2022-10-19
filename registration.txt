@@ -1,0 +1,40 @@
+Registration .,..,..,,
+------------------------------------------------------------------------------------------
+create web application and web form 
+write code after design
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace RegistrraionForm
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Label1.Text = "Name" + TextBox1.Text + "<br/>" + "Age" + TextBox2.Text + "<br/>" + "Email Address" + TextBox3.Text + "<br/>" + "Address" + TextBox4.Text + "<br/>" + "Phone Number" + TextBox5.Text;
+
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            TextBox1.Text = string.Empty;
+            TextBox2.Text = string.Empty;
+            TextBox3.Text = string.Empty;
+            TextBox4.Text = string.Empty;
+            TextBox5.Text = string.Empty;
+
+        }
+
+    }
+}
