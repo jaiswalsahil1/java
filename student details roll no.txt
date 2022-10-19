@@ -1,0 +1,74 @@
+Write code in xml file
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<students>
+  <student>
+    <rollno>45</rollno>
+    <sname>viraldangar</sname>
+    <scollege>valia</scollege>
+    <sstream>bscit</sstream>
+    
+  </student>
+  <student>
+    <rollno>1</rollno>
+    <sname>hello</sname>
+    <scollege>valia</scollege>
+    <sstream>bscit</sstream>
+
+  </student>
+  <student>
+    <rollno>2</rollno>
+    <sname>world</sname>
+    <scollege>valia</scollege>
+    <sstream>bscit</sstream>
+
+  </student>
+  
+</students>
+
+
+
+
+write code in xstl file
+---------------------------------------------------------------------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl"
+>
+  
+
+    <xsl:template match="/">
+      <html>
+        <body>
+          <table border="2">
+            <xsl:for-each select="students/student">
+              <tr>
+                <td>
+                  <xsl:value-of select="sname"/>
+                </td>
+                <td>
+                  <xsl:value-of select="rollno"/>
+                </td>
+                <td>
+                  <xsl:value-of select="scollege"/>
+                </td>
+                <td>
+                  <xsl:value-of select="sstram"/>
+                </td>
+                
+              </tr>
+            </xsl:for-each>
+          </table>
+        </body>
+
+      </html>
+       
+      
+    </xsl:template>
+</xsl:stylesheet>
