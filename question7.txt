@@ -1,0 +1,47 @@
+Design page 
+
+
+take 6 radio button
+make a group of 3 radio button-> control+select 3 radio button -> go to prperties group name write g1-> in properties make true in autopostback -> and in the properties there is events and select in -> checkedchange and radiobutton1
+select on each radio button ->properties->font->name(select font style that you want)->text(copy font style name and paste in this) repeat for all radio button in group 1 that is font style
+in second group same as 
+make a group of 3 radio button-> control+select 3 radio button -> go to prperties group name write g1-> in properties make true in autopostback -> and in the properties there is events and select in -> checkedchange and radiobutton1
+select on each radio button ->properties->text type 20(this is sixe of the the text)
+
+
+take dropdown list as and textbox
+selct on dropdownlist->add new item -> add 3 item-> 1st item text=india and value=1(take same for 2 and 3 list change country and value)
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace quesion7
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            Label1.Font.Name=((RadioButton)sender).Text;
+        }
+
+        protected void fontchanged(object sender, EventArgs e)
+        {
+            Label1.Font.Size = Convert.ToInt32(((RadioButton)sender).Text);
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox1.Text = DropDownList1.SelectedValue.ToString();
+        }
+    }
+}
